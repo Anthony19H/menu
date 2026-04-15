@@ -1,0 +1,7 @@
+prompt 1
+Actúa como un diseñador de interfaces especializado en herramientas de productividad. 
+Mejora visualmente un archivo HTML que funciona como un registro de actividades para un estudiante
+
+promt2 2
+Utiliza una paleta de colores basada en morados oscuros y aplica un difuminado.
+
