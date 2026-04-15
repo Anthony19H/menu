@@ -3,25 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio | Anthony Herrera</title>
+    <title>Dashboard | Anthony Herrera</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Paleta de morados oscuros */
+            --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-bright: #f1f5f9;
+            --text-low: #94a3b8;
+            --accent-purple: #a855f7;
+            --accent-glow: rgba(168, 85, 247, 0.4);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-bright);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 1rem;
+        }
+
+        /* Elemento de difuminado decorativo en el fondo */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 20%;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            background: var(--accent-purple);
+            filter: blur(120px);
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin: 0;
+        background: linear-gradient(to right, #fff, #a855f7);
+    
+    /* Versiones para navegadores basados en Webkit (Chrome, Safari, Edge) */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    /* Versión estándar para máxima compatibilidad */
+        background-clip: text;
+        color: transparent; 
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px); /* Efecto de difuminado */
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-purple);
+            box-shadow: 0 20px 40px var(--accent-glow);
+        }
+
+        .card h2 {
+            margin: 0 0 1rem 0;
+            font-size: 1.4rem;
+            color: var(--text-bright);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-low);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-purple);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .arrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--accent-purple);
+        }
+    </style>
 </head>
 <body>
 
-
     <header>
         <h1>Anthony Herrera</h1>
+        <p style="color: var(--text-low); margin-top: 10px;">Registro de Proyectos y Actividades</p>
     </header>
 
     <div class="container">
         <a href="https://juego-cazando-steel.vercel.app/" class="card">
             <h2>Juego Cazando</h2>
-            
+            <p>Juego interactivo de un  gato tratando de agarrar la comida XD.</p>
+            <div class="arrow">Explorar Proyecto <span>→</span></div>
+        </a>
 
         <a href="https://juego-limones-xi.vercel.app/" class="card">
             <h2>Juego Limones</h2>
+            <p>Juego intercativo de una persona tratando de atrapar limones para hacer limonada jaja</p>
+            <div class="arrow">Explorar Proyecto <span>→</span></div>
         </a>
-
-        
     </div>
 
 </body>
